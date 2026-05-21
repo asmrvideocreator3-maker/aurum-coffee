@@ -1,0 +1,36 @@
+{
+  "name": "Aurum Coffee",
+  "short_name": "Aurum",
+  "description": "Artisan Roasters & Café — Bonifacio High Street, BGC",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1C0F08",
+  "theme_color": "#1C0F08",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/home.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Aurum Coffee Home"
+    }
+  ],
+  "categories": ["food", "lifestyle"],
+  "lang": "en-PH",
+  "dir": "ltr"
+}
