@@ -1336,12 +1336,7 @@ function swM(id,btn){document.querySelectorAll('.mpanel').forEach(p=>p.classList
 const ob=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.08})
 document.querySelectorAll('.rv').forEach(el=>ob.observe(el))
 
-// ── CONTACT FORM with EmailJS ──
-// Steps to activate:
-// 1. Go to emailjs.com and create a free account
-// 2. Add a new Email Service (Gmail works)
-// 3. Create an Email Template — use variables: {{from_name}}, {{from_email}}, {{inquiry_type}}, {{message}}
-// 4. Replace service_7wlywai, template_g3ep9ls, r3ICrKohuhlaJijtT below
+// ── CONTACT FORM with Formspree ──
 function doS(btn){
   const fname=document.querySelector('.fg input[placeholder="Juan"]').value.trim()
   const lname=document.querySelector('.fg input[placeholder="dela Cruz"]').value.trim()
@@ -1357,21 +1352,29 @@ function doS(btn){
   }
   btn.textContent='Sending…'
   btn.disabled=true
-  emailjs.send('service_7wlywai','template_g3ep9ls',{
-    from_name: fname+' '+lname,
-    from_email: email,
-    inquiry_type: inquiry||'General',
-    message: message
-  }).then(()=>{
-    btn.textContent='Message Sent ✓'
-    btn.style.background='#2A5A2A'
-    btn.style.color='#fff'
-    document.querySelector('.fg input[placeholder="Juan"]').value=''
-    document.querySelector('.fg input[placeholder="dela Cruz"]').value=''
-    document.querySelector('.fg input[type="email"]').value=''
-    document.querySelector('.fg select').value=''
-    document.querySelector('.fg textarea').value=''
-    setTimeout(()=>{btn.textContent='Send Message';btn.style.background='';btn.style.color='';btn.disabled=false},3500)
+  fetch('https://formspree.io/f/mlgvjqdn',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({
+      name: fname+' '+lname,
+      email: email,
+      inquiry_type: inquiry||'General',
+      message: message
+    })
+  }).then(r=>r.json()).then(data=>{
+    if(data.ok||data.next){
+      btn.textContent='Message Sent ✓'
+      btn.style.background='#2A5A2A'
+      btn.style.color='#fff'
+      document.querySelector('.fg input[placeholder="Juan"]').value=''
+      document.querySelector('.fg input[placeholder="dela Cruz"]').value=''
+      document.querySelector('.fg input[type="email"]').value=''
+      document.querySelector('.fg select').value=''
+      document.querySelector('.fg textarea').value=''
+      setTimeout(()=>{btn.textContent='Send Message';btn.style.background='';btn.style.color='';btn.disabled=false},3500)
+    } else {
+      throw new Error('Failed')
+    }
   }).catch(()=>{
     btn.textContent='Failed — try again'
     btn.style.background='#8B2020'
