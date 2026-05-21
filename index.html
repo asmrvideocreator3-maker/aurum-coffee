@@ -46,7 +46,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
   // Replace with your actual EmailJS public key
-  (function(){emailjs.init({publicKey:"YOUR_EMAILJS_PUBLIC_KEY"});})();
+  (function(){emailjs.init({publicKey:"r3ICrKohuhlaJijtT"});})();
 </script>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
@@ -1341,7 +1341,7 @@ document.querySelectorAll('.rv').forEach(el=>ob.observe(el))
 // 1. Go to emailjs.com and create a free account
 // 2. Add a new Email Service (Gmail works)
 // 3. Create an Email Template — use variables: {{from_name}}, {{from_email}}, {{inquiry_type}}, {{message}}
-// 4. Replace YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, YOUR_EMAILJS_PUBLIC_KEY below
+// 4. Replace service_7wlywai, template_g3ep9ls, r3ICrKohuhlaJijtT below
 function doS(btn){
   const fname=document.querySelector('.fg input[placeholder="Juan"]').value.trim()
   const lname=document.querySelector('.fg input[placeholder="dela Cruz"]').value.trim()
@@ -1357,7 +1357,7 @@ function doS(btn){
   }
   btn.textContent='Sending…'
   btn.disabled=true
-  emailjs.send('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID',{
+  emailjs.send('service_7wlywai','template_g3ep9ls',{
     from_name: fname+' '+lname,
     from_email: email,
     inquiry_type: inquiry||'General',
