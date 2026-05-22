@@ -116,13 +116,13 @@ a{text-decoration:none;color:inherit}
 .flip-inq{background:var(--ink);color:var(--cream);padding:.4rem .95rem;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--ff-sans);transition:all .3s;border-radius:2px}
 .flip-inq:hover{background:var(--caramel);color:var(--ink)}
 /* top color strip */
-.front-strip{height:8px;width:100%;flex-shrink:0}
+.front-strip{height:52px;width:100%;flex-shrink:0;position:relative;display:flex;align-items:center;padding:0 1rem}.front-logo{display:flex;align-items:center;gap:.4rem}.front-logo-mark{width:28px;height:28px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--ff-serif);font-size:.85rem;font-weight:700;color:#fff;flex-shrink:0}.front-logo-txt{font-family:var(--ff-serif);font-size:.85rem;font-weight:600;color:rgba(255,255,255,.9);letter-spacing:.05em}.front-logo-txt em{color:rgba(255,220,100,.9);font-style:italic}
 .front-body{padding:1.4rem;display:flex;flex-direction:column;flex:1}
 
 /* BACK — actual product image */
 .flip-back{transform:rotateY(180deg);position:relative}
 .flip-back img{width:100%;height:100%;object-fit:cover}
-.flip-back-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,18,8,.9) 0%,rgba(26,18,8,.1) 55%,transparent 100%)}
+.flip-back-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,18,8,.92) 0%,rgba(44,26,10,.6) 40%,rgba(200,129,58,.15) 100%)}
 .flip-back-body{position:absolute;bottom:0;left:0;right:0;padding:1.4rem}
 .flip-back-logo{position:absolute;top:1rem;right:1rem;z-index:3;opacity:.85;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}.flip-back-name{font-family:var(--ff-serif);font-size:1.3rem;font-weight:500;color:var(--cream);margin-bottom:.4rem}
 .flip-back-btn{display:flex;gap:.5rem;margin-top:.75rem}
@@ -312,7 +312,7 @@ footer{background:var(--ink);padding:4rem 3rem 0}
     <div class="flip-card rv" data-cat="machines" onclick="flipCard(this)">
       <div class="flip-inner">
         <div class="flip-front">
-          <div class="front-strip" style="background:linear-gradient(to right,#2C1A0A,#C8813A)"></div>
+          <div class="front-strip" style="position:relative" style="background:linear-gradient(to right,#2C1A0A,#C8813A)"><div class="front-logo"><div class="front-logo-mark">P</div><div class="front-logo-txt">Perky <em>Blend</em></div></div></div>
           <div class="front-body">
             <p class="flip-cat">Espresso Machine · LaJetina</p>
             <h3 class="flip-name">Legend Coffee Machine</h3>
@@ -343,7 +343,7 @@ footer{background:var(--ink);padding:4rem 3rem 0}
     <div class="flip-card rv" data-cat="machines" data-delay="1" onclick="flipCard(this)">
       <div class="flip-inner">
         <div class="flip-front">
-          <div class="front-strip" style="background:linear-gradient(to right,#1A1A1A,#C8813A)"></div>
+          <div class="front-strip" style="position:relative" style="background:linear-gradient(to right,#1A1A1A,#C8813A)"><div class="front-logo"><div class="front-logo-mark">P</div><div class="front-logo-txt">Perky <em>Blend</em></div></div></div>
           <div class="front-body">
             <p class="flip-cat">Espresso Machine · LaJetina</p>
             <h3 class="flip-name">Legend Q2-1T Dual Group</h3>
@@ -374,7 +374,7 @@ footer{background:var(--ink);padding:4rem 3rem 0}
     <div class="flip-card rv" data-cat="machines" data-delay="2" onclick="flipCard(this)">
       <div class="flip-inner">
         <div class="flip-front">
-          <div class="front-strip" style="background:linear-gradient(to right,#2A2A2A,#E4A84A)"></div>
+          <div class="front-strip" style="position:relative" style="background:linear-gradient(to right,#2A2A2A,#E4A84A)"><div class="front-logo"><div class="front-logo-mark">P</div><div class="front-logo-txt">Perky <em>Blend</em></div></div></div>
           <div class="front-body">
             <p class="flip-cat">Espresso Machine · LaJetina</p>
             <h3 class="flip-name">Premium Dual Group Pro</h3>
@@ -405,7 +405,7 @@ footer{background:var(--ink);padding:4rem 3rem 0}
     <div class="flip-card rv" data-cat="roasters" onclick="flipCard(this)">
       <div class="flip-inner">
         <div class="flip-front">
-          <div class="front-strip" style="background:linear-gradient(to right,#3D2800,#C8813A)"></div>
+          <div class="front-strip" style="position:relative" style="background:linear-gradient(to right,#3D2800,#C8813A)"><div class="front-logo"><div class="front-logo-mark">P</div><div class="front-logo-txt">Perky <em>Blend</em></div></div></div>
           <div class="front-body">
             <p class="flip-cat">Coffee Roaster · Perky Blend</p>
             <h3 class="flip-name">White Precision Roaster</h3>
@@ -436,7 +436,7 @@ footer{background:var(--ink);padding:4rem 3rem 0}
     <div class="flip-card rv" data-cat="grinder" data-delay="1" onclick="flipCard(this)">
       <div class="flip-inner">
         <div class="flip-front">
-          <div class="front-strip" style="background:linear-gradient(to right,#1A1A18,#C8813A)"></div>
+          <div class="front-strip" style="position:relative" style="background:linear-gradient(to right,#1A1A18,#C8813A)"><div class="front-logo"><div class="front-logo-mark">P</div><div class="front-logo-txt">Perky <em>Blend</em></div></div></div>
           <div class="front-body">
             <p class="flip-cat">Coffee Grinder · LaJetina</p>
             <h3 class="flip-name">LaJetina Coffee Grinder</h3>
@@ -467,7 +467,7 @@ footer{background:var(--ink);padding:4rem 3rem 0}
     <div class="flip-card rv" data-cat="beans" onclick="flipCard(this)">
       <div class="flip-inner">
         <div class="flip-front">
-          <div class="front-strip" style="background:linear-gradient(to right,#1A3020,#6A9030)"></div>
+          <div class="front-strip" style="position:relative" style="background:linear-gradient(to right,#1A3020,#6A9030)"><div class="front-logo"><div class="front-logo-mark">P</div><div class="front-logo-txt">Perky <em>Blend</em></div></div></div>
           <div class="front-body">
             <p class="flip-cat">Coffee Beans · Perky Blend</p>
             <h3 class="flip-name">Arabica Roasted Coffee — 1kg</h3>
@@ -498,7 +498,7 @@ footer{background:var(--ink);padding:4rem 3rem 0}
     <div class="flip-card rv" data-cat="beans" data-delay="1" onclick="flipCard(this)">
       <div class="flip-inner">
         <div class="flip-front">
-          <div class="front-strip" style="background:linear-gradient(to right,#2C1A08,#C8813A)"></div>
+          <div class="front-strip" style="position:relative" style="background:linear-gradient(to right,#2C1A08,#C8813A)"><div class="front-logo"><div class="front-logo-mark">P</div><div class="front-logo-txt">Perky <em>Blend</em></div></div></div>
           <div class="front-body">
             <p class="flip-cat">Coffee Beans · Perky Blend</p>
             <h3 class="flip-name">Arabica Roasted Coffee — 500g</h3>
@@ -529,7 +529,7 @@ footer{background:var(--ink);padding:4rem 3rem 0}
     <div class="flip-card rv" data-cat="syrups" onclick="flipCard(this)">
       <div class="flip-inner">
         <div class="flip-front">
-          <div class="front-strip" style="background:linear-gradient(to right,#8B5020,#E4A84A)"></div>
+          <div class="front-strip" style="position:relative" style="background:linear-gradient(to right,#8B5020,#E4A84A)"><div class="front-logo"><div class="front-logo-mark">P</div><div class="front-logo-txt">Perky <em>Blend</em></div></div></div>
           <div class="front-body">
             <p class="flip-cat">Flavored Syrup · Nature Taste</p>
             <h3 class="flip-name">Vanilla Flavoured Syrup</h3>
@@ -560,7 +560,7 @@ footer{background:var(--ink);padding:4rem 3rem 0}
     <div class="flip-card rv" data-cat="syrups" data-delay="1" onclick="flipCard(this)">
       <div class="flip-inner">
         <div class="flip-front">
-          <div class="front-strip" style="background:linear-gradient(to right,#8A7A00,#E8D050)"></div>
+          <div class="front-strip" style="position:relative" style="background:linear-gradient(to right,#8A7A00,#E8D050)"><div class="front-logo"><div class="front-logo-mark">P</div><div class="front-logo-txt">Perky <em>Blend</em></div></div></div>
           <div class="front-body">
             <p class="flip-cat">Flavored Syrup · Nature Taste</p>
             <h3 class="flip-name">Banana Flavoured Syrup</h3>
@@ -591,7 +591,7 @@ footer{background:var(--ink);padding:4rem 3rem 0}
     <div class="flip-card rv" data-cat="syrups" data-delay="2" onclick="flipCard(this)">
       <div class="flip-inner">
         <div class="flip-front">
-          <div class="front-strip" style="background:linear-gradient(to right,#1A1060,#6070C0)"></div>
+          <div class="front-strip" style="position:relative" style="background:linear-gradient(to right,#1A1060,#6070C0)"><div class="front-logo"><div class="front-logo-mark">P</div><div class="front-logo-txt">Perky <em>Blend</em></div></div></div>
           <div class="front-body">
             <p class="flip-cat">Flavored Syrup · Nature Taste</p>
             <h3 class="flip-name">Butterfly Pea Syrup</h3>
@@ -622,7 +622,7 @@ footer{background:var(--ink);padding:4rem 3rem 0}
     <div class="flip-card rv" data-cat="syrups" data-delay="3" onclick="flipCard(this)">
       <div class="flip-inner">
         <div class="flip-front">
-          <div class="front-strip" style="background:linear-gradient(to right,#2A4010,#A0C060)"></div>
+          <div class="front-strip" style="position:relative" style="background:linear-gradient(to right,#2A4010,#A0C060)"><div class="front-logo"><div class="front-logo-mark">P</div><div class="front-logo-txt">Perky <em>Blend</em></div></div></div>
           <div class="front-body">
             <p class="flip-cat">Fruit Preparation · Nature Taste</p>
             <h3 class="flip-name">Kiwi Fruit Preparation</h3>
@@ -689,7 +689,7 @@ footer{background:var(--ink);padding:4rem 3rem 0}
           </div>
         </div>
       </div>
-      <a href="https://facebook.com/PerkyBlend" target="_blank" class="fb-cta">
+      <a href="https://m.me/PerkyBlend" target="_blank" class="fb-cta">
         <div class="fb-ico">f</div>
         <div class="fb-txt">
           <span>Message us on Facebook</span>
